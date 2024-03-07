@@ -3,14 +3,14 @@ import { useState } from "react";
 type Props = {
   checked?: boolean;
   name: string;
-  onChange?: () => void;
+  onChange: () => void;
 };
 
 const TodoListCheckbox = ({ checked, name, onChange }: Props) => {
   const [check, setCheck] = useState(checked);
 
   const handleChange = () => {
-    onChange;
+    onChange();
     setCheck(!check);
   };
 
